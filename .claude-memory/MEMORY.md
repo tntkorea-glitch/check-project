@@ -1,2 +1,3 @@
 - [User profile](user_profile.md) — 기본 개발 환경과 협업 방식
 - [Project init](project_init.md) — 프로젝트 초기 셋업 정보
+- [Project purpose](project_purpose.md) — check-project = 12~13개 프로젝트 리포팅 허브 (Supabase + /bye 자동전송)
