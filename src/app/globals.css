@@ -24,3 +24,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* 선택된 보고서 1건만 인쇄 */
+@media print {
+  body[data-print-only] > *:not(#__next),
+  body[data-print-only] #__next > *:not(main) {
+    display: none !important;
+  }
+  body[data-print-only] main > div > *:not(.print-target) {
+    display: none !important;
+  }
+  @page { margin: 1.2cm; }
+}
