@@ -21,6 +21,8 @@ export type Project = {
   updated_at: string;
 };
 
+export type ReviewStatus = "unreviewed" | "pending" | "reviewed" | "applied";
+
 export type Report = {
   id: number;
   project_slug: string;
@@ -29,5 +31,6 @@ export type Report = {
   remaining_work: string | null;
   next_work: string | null;
   raw_markdown: string | null;
+  review_status: ReviewStatus;
   created_at: string;
 };
