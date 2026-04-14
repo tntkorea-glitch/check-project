@@ -157,7 +157,7 @@ function ReportDocument({
           <span className="mx-2">·</span>
           자동 수집 (Claude Code <code>/bye</code>)
         </p>
-        <PrintButton targetId={`report-${report.id}`} />
+        <PrintButton />
       </footer>
     </article>
   );
