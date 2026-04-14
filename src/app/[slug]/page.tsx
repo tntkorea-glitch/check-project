@@ -3,6 +3,7 @@ import { notFound, redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
 import { supabase, type Project, type Report } from "@/lib/supabase";
 import PrintButton from "./PrintButton";
+import ReportActions from "./ReportActions";
 
 export const dynamic = "force-dynamic";
 
