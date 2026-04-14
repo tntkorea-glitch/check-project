@@ -1,0 +1,2 @@
+- [User profile](user_profile.md) — 기본 개발 환경과 협업 방식
+- [Project init](project_init.md) — 프로젝트 초기 셋업 정보
