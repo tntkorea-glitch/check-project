@@ -151,6 +151,12 @@ function ReportDocument({
         )}
       </section>
 
+      {/* 액션 바 */}
+      <div className="border-t border-gray-200 px-8 py-3 flex items-center justify-between bg-gray-50">
+        <ReviewBadge status={report.review_status} />
+        <ReportActions reportId={report.id} initial={report.review_status} />
+      </div>
+
       {/* 푸터 */}
       <footer className="border-t border-gray-300 px-8 py-3 flex items-center justify-between text-xs text-gray-500">
         <p>
