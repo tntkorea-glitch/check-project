@@ -94,7 +94,10 @@ export default async function DashboardPage() {
 
                   {r ? (
                     <div className="text-xs text-gray-600 space-y-1 pt-2 border-t">
-                      <p className="text-gray-400">최근: {r.report_date}</p>
+                      <div className="flex items-center justify-between">
+                        <p className="text-gray-400">최근: {r.report_date}</p>
+                        <ReviewBadge status={r.review_status} />
+                      </div>
                       {r.next_work && (
                         <p className="line-clamp-2">
                           <span className="text-gray-400">다음: </span>
