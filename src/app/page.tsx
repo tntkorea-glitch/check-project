@@ -118,6 +118,17 @@ export default async function DashboardPage() {
   );
 }
 
+function ReviewBadge({ status }: { status: Report["review_status"] }) {
+  const map = {
+    unreviewed: { text: "미확인",   cls: "bg-gray-200 text-gray-700" },
+    pending:    { text: "적용전",   cls: "bg-amber-100 text-amber-800" },
+    reviewed:   { text: "확인",     cls: "bg-blue-100 text-blue-800" },
+    applied:    { text: "적용완료", cls: "bg-green-100 text-green-800" },
+  };
+  const s = map[status] ?? map.unreviewed;
+  return <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${s.cls}`}>{s.text}</span>;
+}
+
 function StatusBadge({ status }: { status: Project["status"] }) {
   const map = {
     active:   { text: "진행중", cls: "bg-green-100 text-green-700" },
