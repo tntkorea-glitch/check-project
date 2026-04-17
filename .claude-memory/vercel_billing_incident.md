@@ -9,13 +9,13 @@ originSessionId: 7245597b-3372-4d2d-a76b-68448ecd1de5
 **원인**:
 1. Claude Code 자동 훅(PostToolUse)이 파일 수정할 때마다 commit + push → Vercel 빌드 트리거
 2. 같은 GitHub 리포에 Vercel 프로젝트가 2개씩 연결 (1 push = 2 builds)
-   - auto_instagram + auto-instagram → 동일 리포
+   - auto_instagram + postica → 동일 리포
    - video-automation-v2 + video-automation → 동일 리포
 3. Pro 플랜은 초과 과금이 자동 멈추지 않음 (Alerts only 상태였음)
 
 **조치 완료**:
 - 중복 Vercel 프로젝트 삭제: auto_instagram, video-automation-v2
-- 실사용 프로젝트 Git Disconnect: auto-instagram(postica.co.kr), video-automation(yutica.co.kr) — 시범서비스 시 재연결
+- 실사용 프로젝트 Git Disconnect: postica(postica.co.kr), video-automation(yutica.co.kr) — 시범서비스 시 재연결
 - 글로벌 settings.json: PostToolUse 훅 전체 제거, Stop 훅에서 push 제거
 - 11개 프로젝트 로컬 settings.json: 전부 push 제거
 - Spend Budget: $200 → $10, Pause Production Deployments ON
