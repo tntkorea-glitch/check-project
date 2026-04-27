@@ -3,3 +3,4 @@
 - [Project purpose](project_purpose.md) — check-project = 12~13개 프로젝트 리포팅 허브 (Supabase + /bye 자동전송)
 - [Vercel billing incident](vercel_billing_incident.md) — 2026-04-18 Build Minutes $334 폭주, 원인 분석 및 조치 완료
 - [Vercel pricing](vercel_pricing.md) — Pro 플랜 과금 구조, $7.50/시간, Spend Management 설정
+- [Hub slug dedup](hub_slug_dedup.md) — 2026-04-25 중복 4건 정리 완료, 예방책(`.project-slug`/slug 정규화) 미구현
